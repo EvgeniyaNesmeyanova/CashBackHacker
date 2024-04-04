@@ -45,6 +45,16 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
     @Test
+    public void shouldCalculateMul1000() { //покупка кратная 1000 руб
+        CashbackHackService service = new CashbackHackService();
+        int amount=2_000;
+
+        int actual=service.remain(amount);
+        int expected=0;
+
+        assertEquals(actual, expected);
+    }
+    @Test
     public void shouldCalculateMaxMax() { //покупка ровно на 1001 руб
         CashbackHackService service = new CashbackHackService();
         int amount=1_001;
